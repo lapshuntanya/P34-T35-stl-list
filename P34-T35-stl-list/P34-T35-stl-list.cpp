@@ -1,4 +1,5 @@
 #include "MyList.h"
+#include "DList.h"
 
 int main()
 {
@@ -31,6 +32,13 @@ int main()
     a.push_back(9); //head=7, current=9
     a.push_back(2); //head=7, current=2
     a.showList();*/
+
+    DList<int> b;
+    b.push_back(7);
+    b.push_back(4);
+    b.push_back(9);
+    b.push_back(2);
+    b.showList();
 
 }
 

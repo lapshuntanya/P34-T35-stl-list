@@ -43,7 +43,8 @@ public:
 	void showList() {
 		DNode<T>* p = head;
 		while (p != nullptr) {
-			cout << p->info << " ";
+			//cout << p->info << " ";
+			p->showNode();
 			p = p->next;
 		}
 		cout << endl;
