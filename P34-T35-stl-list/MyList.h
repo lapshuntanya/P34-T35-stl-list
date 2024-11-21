@@ -25,7 +25,20 @@ namespace mylist {
 		MyList() { head = current = nullptr; }
 
 		void push_back(T value) {
+			//1 Створюємо новий вузол
+			Node<T>* el = new Node<T>(value); //info=value, next=nullptr
 
+			if (head == nullptr) { //Якщо список пустий
+				//встановлюємо перший вузол
+				head = el;
+				current = el;
+			}
+			else {
+				//Звязуємо вузли
+				current->next = el;
+				//присвоюємо поточному вузлу новий(останній)
+				current = el;
+			}
 		}
 	};
 
