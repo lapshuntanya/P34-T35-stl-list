@@ -17,3 +17,26 @@ public:
 		cout<< "\tNEXT: " << next << endl;
 	}
 };
+
+
+template <typename T>
+class DList {
+	DNode<T>* head;
+	DNode<T>* current;
+public:
+	DList() { head = current = nullptr; }
+
+	void push_back(T value) {
+		DNode<T>* el = new DNode<T>(value);
+
+		if (head == nullptr) {
+			head = current = el;
+		}
+		else {
+			current->next = el;
+			el->prev = current;
+
+			current = el;
+		}
+	}
+};
