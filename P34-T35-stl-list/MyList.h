@@ -40,6 +40,15 @@ namespace mylist {
 				current = el;
 			}
 		}
+
+		void showList() {
+			Node<T>* p = head;
+			while (p != nullptr) {
+				p->showNode();
+				p = p->next;
+			}
+			cout << endl;
+		}
 	};
 
 }
