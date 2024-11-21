@@ -5,8 +5,7 @@ int main()
     using namespace mylist;
 
     //7 4 9 2
-
-    Node<int> first(7); //info =7, next =nullptr
+   /* Node<int> first(7); //info =7, next =nullptr
 
     Node<int> second(4); // info=4, next=nullptr
     first.next = &second;
@@ -23,6 +22,7 @@ int main()
         cout << p->info << endl;
         p->showNode();
         p = p->next;
-    }
+    }*/
+
 }
 

@@ -16,4 +16,17 @@ namespace mylist {
 			cout << "INFO: " << info << "\tNEXT: " << next << endl;
 		}
 	};
+
+	template <typename T>
+	class MyList {
+		Node<T>* head;
+		Node<T>* current;
+	public:
+		MyList() { head = current = nullptr; }
+
+		void push_back(T value) {
+
+		}
+	};
+
 }
