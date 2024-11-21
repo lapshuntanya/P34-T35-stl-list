@@ -38,7 +38,17 @@ int main()
     b.push_back(4);
     b.push_back(9);
     b.push_back(2);
-    b.showList();
+
+    b.showList(); // 7 4 9 2
+    cout << "---------------\n";
+    b.showReverseList(); // 2 9 4 7
+    cout << "---------------\n";
+
+    DNode<int>* user = b.search(2);
+    if (user == nullptr)
+        cout << "Not found!\n";
+    else
+        user->showNode();
 
 }
 

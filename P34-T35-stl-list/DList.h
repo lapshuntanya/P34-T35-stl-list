@@ -25,6 +25,20 @@ class DList {
 	DNode<T>* current;
 public:
 	DList() { head = current = nullptr; }
+	~DList() {
+		DNode<T>* p = head;
+		DNode<T>* pdel = head;
+
+		while (p != nullptr) {
+			cout << "del: " << p->info << endl;
+			pdel = p;
+
+			p = p->next;
+			if (pdel != nullptr) {
+				delete pdel;
+			}
+		}
+	}
 
 	void push_back(T value) {
 		DNode<T>* el = new DNode<T>(value);
@@ -43,10 +57,34 @@ public:
 	void showList() {
 		DNode<T>* p = head;
 		while (p != nullptr) {
-			//cout << p->info << " ";
-			p->showNode();
+			cout << p->info << " ";
+			//p->showNode();
 			p = p->next;
 		}
 		cout << endl;
+	}
+
+	void showReverseList() {
+		DNode<T>* p = current;
+		while (p != nullptr) {
+			cout << p->info << " ";
+			//p->showNode();
+			p = p->prev;
+		}
+		cout << endl;
+	}
+
+	DNode<T>* search(T value) {
+		//Знаходження вузла з зазначенним value
+		//Якщо такого вузла немає, то повернути nullptr
+
+		DNode<T>* p = head;
+		while (p != nullptr) {
+			if (p->info == value)
+				return p;
+			 
+			p = p->next;
+		}
+		return nullptr;
 	}
 };
