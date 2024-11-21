@@ -24,14 +24,13 @@ int main()
         p = p->next;
     }*/
 
+   /*
     MyList<int> a; //head=current = nullptr;
-
     a.push_back(7); //head=7, current=7
     a.push_back(4); //head=7, current=4
     a.push_back(9); //head=7, current=9
     a.push_back(2); //head=7, current=2
-
-    a.showList();
+    a.showList();*/
 
 }
 
