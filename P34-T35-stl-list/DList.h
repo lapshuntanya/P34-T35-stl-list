@@ -39,4 +39,13 @@ public:
 			current = el;
 		}
 	}
+
+	void showList() {
+		DNode<T>* p = head;
+		while (p != nullptr) {
+			cout << p->info << " ";
+			p = p->next;
+		}
+		cout << endl;
+	}
 };
